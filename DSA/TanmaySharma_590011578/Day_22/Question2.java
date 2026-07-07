@@ -1,7 +1,8 @@
-public class Question {
+package DSA.TanmaySharma_590011578.Day_22;
+
+public class Question2 {
 
     public static void cardGame(int[] cards) {
-
         int left = 0;
         int right = cards.length - 1;
 
@@ -11,7 +12,6 @@ public class Question {
         boolean firstTurn = true;
 
         while (left <= right) {
-
             int picked;
 
             if (cards[left] >= cards[right]) {
@@ -35,9 +35,7 @@ public class Question {
     }
 
     public static void main(String[] args) {
-
         int[] cards = {4, 1, 2, 10};
-
         cardGame(cards);
     }
 }

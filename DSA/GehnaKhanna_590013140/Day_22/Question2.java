@@ -1,4 +1,4 @@
-public class Question {
+public class Main {
 
     public static void cardGame(int[] cards) {
 
@@ -8,7 +8,7 @@ public class Question {
         int player1 = 0;
         int player2 = 0;
 
-        boolean firstTurn = true;
+        boolean turn = true; // true = Player1
 
         while (left <= right) {
 
@@ -22,16 +22,17 @@ public class Question {
                 right--;
             }
 
-            if (firstTurn) {
+            if (turn) {
                 player1 += picked;
             } else {
                 player2 += picked;
             }
 
-            firstTurn = !firstTurn;
+            turn = !turn;
         }
 
-        System.out.println(player1 + " " + player2);
+        System.out.println("Player 1 Score = " + player1);
+        System.out.println("Player 2 Score = " + player2);
     }
 
     public static void main(String[] args) {

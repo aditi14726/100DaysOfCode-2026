@@ -1,6 +1,6 @@
-public class Question {
+class Solution {
 
-    public static void cardGame(int[] cards) {
+    public int[] cardGame(int[] cards) {
 
         int left = 0;
         int right = cards.length - 1;
@@ -14,7 +14,7 @@ public class Question {
 
             int picked;
 
-            if (cards[left] >= cards[right]) {
+            if (cards[left] > cards[right]) {
                 picked = cards[left];
                 left++;
             } else {
@@ -31,13 +31,6 @@ public class Question {
             firstTurn = !firstTurn;
         }
 
-        System.out.println(player1 + " " + player2);
-    }
-
-    public static void main(String[] args) {
-
-        int[] cards = {4, 1, 2, 10};
-
-        cardGame(cards);
+        return new int[]{player1, player2};
     }
 }
